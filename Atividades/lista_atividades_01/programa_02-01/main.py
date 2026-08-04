@@ -30,12 +30,12 @@ while(True):
     limpar()
     match opcao:
         case"1":
-            with open(f"programa_02-02/bilhete/filme1.txt","w", encoding="utf-8")as f:
+            with open(f"programa_02-01/bilhete/filme1.txt","w", encoding="utf-8")as f:
                 f.write(f"Nome:{nome} Idade:{idade}")
             break
         case"2":
             if(idade>=12):
-                with open(f"programa_02-02/bilhete/filme2.txt","w", encoding="utf-8")as f:
+                with open(f"programa_02-01/bilhete/filme2.txt","w", encoding="utf-8")as f:
                     f.write(f"Nome:{nome} Idade:{idade}")
                 break
             else:
@@ -43,7 +43,7 @@ while(True):
                 continue
         case"3":
             if(idade>=14):
-                with open(f"programa_02-02/bilhete/filme3.txt","w", encoding="utf-8")as f:
+                with open(f"programa_02-01/bilhete/filme3.txt","w", encoding="utf-8")as f:
                     f.write(f"Nome:{nome} Idade:{idade}")
                 break
             else:
@@ -51,7 +51,7 @@ while(True):
                 continue
         case"4":
             if(idade>=16):
-                with open(f"programa_02-02/bilhete/filme4.txt","w", encoding="utf-8")as f:
+                with open(f"programa_02-01/bilhete/filme4.txt", "w", encoding="utf-8")as f:
                     f.write(f"Nome:{nome} Idade:{idade}")
                 break
             else:
@@ -59,7 +59,7 @@ while(True):
                 continue
         case"5":
             if(idade>=18):
-                with open(f"programa_02-02/bilhete/filme5.txt","w", encoding="utf-8")as f:
+                with open(f"programa_02-01/bilhete/filme5.txt","w", encoding="utf-8")as f:
                    f.write(f"Nome:{nome} Idade:{idade}")
                 break
             else:
