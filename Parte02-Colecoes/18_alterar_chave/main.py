@@ -9,11 +9,12 @@ usuario = {
 #NOTE - usuario informa a chave que deseja alterar
 chave = input("Informe o nome da chave: ").strip().lower()
 
-#TODO - Verificar se a chave existe
+if chave in usuario:
+    #usuario informa o novo valor para a chave
+    usuario[chave] = input(f"Informe o novo valor para {chave}: ").strip()
 
-#Alterar a chave nome no discionario
-usuario['nome'] = input(f"Informe o novo nome de {usuario.get('nome')}:").strip().title()
-
-#NOTE - Imprimir o dicionario
-for chave in usuario:
-    print(f"{chave.upper()}: {usuario.get(chave)}")
+    #NOTE - Imprimir o dicionario
+    for chave, valor in usuario.items():
+        print(f"{chave.upper()}: {valor}")
+else:
+    print("Chave nao encontrada.")
