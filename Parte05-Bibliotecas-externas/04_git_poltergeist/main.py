@@ -1,6 +1,10 @@
 import pyautogui as auto
 from datetime import date
 
+#   
+#   pip install pyinstaller
+#   pyinstaller --onefile --name "Gitpush poltergeist v1.0" --icon "icon/ghost.ico" main.py
+
 def hoje():
     return date.today().strftime("%d/%m/%Y")
 
@@ -17,7 +21,7 @@ def main():
     auto.press("enter")
     auto.write("git push")
     auto.press("enter")
-
+    auto.alert(text="Finalizado com Sucesso!", button="Finalizado")
 
 if __name__ == "__main__":
     main()
