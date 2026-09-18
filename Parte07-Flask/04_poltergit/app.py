@@ -1,8 +1,17 @@
 from flask import Flask, render_template, request
 from datetime import date
 import pyautogui as auto
+import webview
 
-app = Flask(__name__)
+import os
+import sys
+
+if getattr(sys, 'frozen', False):
+    template_folder = os.path.join(sys._MEIPASS, 'templates')
+    static_folder = os.path.join(sys._MEIPASS, 'static')
+    app = Flask(__name__, template_folder=template_folder, static_folder=static_folder)
+else:
+    app = Flask(__name__)
 
 @app.route("/")
 def index():
@@ -34,4 +43,14 @@ def commitar():
 
 
 if __name__ == ("__main__"):
-    app.run(debug=True)
+#    app.run(debug=True)
+    window = webview.create_window(
+        title="PolterGit",
+        url=app,
+        width=1000,
+        height=700
+    )
+
+    webview.start() 
+
+#pyinstaller --onefile --noconsole --name "PolterGit V2.0" --icon "Ghost.ico" --add-data "templates;templates" --add-data "static;static" app.py
